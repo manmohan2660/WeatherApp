@@ -1,0 +1,52 @@
+/* Weather Card Container */
+.weather-card {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .weather-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* City Name */
+  .weather-city {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Weather Description */
+  .weather-description {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  /* Temperature Styling */
+  .weather-temp {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  /* Humidity & Wind */
+  .weather-humidity,
+  .weather-wind {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  /* Weather Icon */
+  .weather-icon {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+  }
+  

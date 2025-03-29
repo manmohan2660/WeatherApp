@@ -1,0 +1,32 @@
+/* Default Light Mode */
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Dark Mode */
+  .dark-mode {
+    background-color: #1a1a1a !important;
+    color: #f5f5f5 !important;
+  }
+  
+  /* Theme Toggle Button */
+  .theme-toggle-btn {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .theme-toggle-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #0056b3, #0099cc);
+  }
+  
