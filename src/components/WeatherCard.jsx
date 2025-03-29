@@ -1,5 +1,5 @@
 import React from "react";
-import "./WeatherCard.css"; // Import the CSS file
+import "./WeatherCard.css"; 
 
 export default function WeatherCard({ weather }) {
   return (

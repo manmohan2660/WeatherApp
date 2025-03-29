@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
-import "./ThemeToggle.css"; // Import the CSS file
+import "./ThemeToggle.css";
 
 export default function ThemeToggle() {
+  // Check for saved theme preference or use system preference
   const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem("theme") === "dark";
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      return savedTheme === "dark";
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
   });
 
   useEffect(() => {

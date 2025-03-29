@@ -1,5 +1,5 @@
 import React from "react";
-import "./SearchHistory.css"; // Import custom styles
+import "./SearchHistory.css"; 
 
 export default function SearchHistory({ history, onSelectCity }) {
   return (

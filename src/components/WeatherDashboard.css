@@ -1,3 +1,30 @@
+/* Default light theme variables */
+:root {
+  --bg-gradient-start: #74ebd5;
+  --bg-gradient-end: #acb6e5;
+  --text-color: #333;
+  --title-color: #fff;
+  --search-border: #fff;
+  --search-focus: #007bff;
+  --button-bg: #007bff;
+  --button-hover: #0056b3;
+  --button-disabled: #ccc;
+  --error-color: #ff4d4d;
+}
+
+/* Dark theme variables */
+:root.dark-mode {
+  --bg-gradient-start: #1a3a4a;
+  --bg-gradient-end: #2c3e50;
+  --text-color: #f5f5f5;
+  --title-color: #f5f5f5;
+  --search-border: #555;
+  --search-focus: #4dabf7;
+  --button-bg: #4dabf7;
+  --button-hover: #339af0;
+  --button-disabled: #555;
+  --error-color: #ff8787;
+}
 
 .weather-dashboard {
     display: flex;
@@ -5,69 +32,67 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(to right, #74ebd5, #acb6e5); 
-    color: #333;
+    background: linear-gradient(to right, var(--bg-gradient-start), var(--bg-gradient-end)); 
+    color: var(--text-color);
     padding: 20px;
     text-align: center;
     font-family: "Poppins", sans-serif;
-  }
+    transition: background 0.3s ease, color 0.3s ease;
+}
   
-  /* Title */
-  .title {
+.title {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #fff;
+    color: var(--title-color);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  }
+}
   
-  /* Search Box */
-  .search-container {
+.search-container {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
-  }
+}
   
-  .search-input {
+.search-input {
     padding: 10px;
-    border: 2px solid #fff;
+    border: 2px solid var(--search-border);
     border-radius: 25px;
     width: 250px;
     font-size: 1rem;
     outline: none;
-    transition: 0.3s;
-  }
+    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+}
   
-  .search-input:focus {
-    border-color: #007bff;
+.search-input:focus {
+    border-color: var(--search-focus);
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
-  }
+}
   
-  /* Search Button */
-  .search-button {
+.search-button {
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: var(--button-bg);
     border: none;
     border-radius: 25px;
     color: white;
     font-size: 1rem;
     cursor: pointer;
-    transition: 0.3s;
-  }
+    transition: all 0.3s;
+}
   
-  .search-button:hover {
-    background-color: #0056b3;
-  }
+.search-button:hover {
+    background-color: var(--button-hover);
+}
   
-  .search-button:disabled {
-    background-color: #ccc;
+.search-button:disabled {
+    background-color: var(--button-disabled);
     cursor: not-allowed;
-  }
+}
   
-  /* Error Message */
-  .error-message {
-    color: #ff4d4d;
+.error-message {
+    color: var(--error-color);
     font-weight: bold;
     margin-top: 10px;
-  }
-  
+}
